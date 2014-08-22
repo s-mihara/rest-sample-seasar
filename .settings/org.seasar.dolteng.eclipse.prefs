@@ -1,0 +1,8 @@
+DaoType=S2Dao
+DefaultResourcePath=/sastrats/src/main/resources
+DefaultRootPackage=org.seasar.sastruts.example
+DefaultSrcPath=/sastrats/src/main/java
+ServletPath=sastrats
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp
+eclipse.preferences.version=1

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="sastrats_checkout">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Applications/dev/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="Web App ライブラリー.libraryclasspath">
+        <pathelement location="src/main/webapp/WEB-INF/lib/antlr-2.7.7.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/aopalliance-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-collections-3.1.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-digester-1.6.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-el-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-fileupload-1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-io-1.3.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-logging-1.1.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-validator-1.2.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-annotation_1.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-ejb_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-interceptor_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-jpa_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-jta_1.1_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/h2-1.0.69.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jakarta-oro-2.0.8.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jakarta-taglibs-standard-1.1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/javassist-3.4.ga.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jstl-1.1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/log4j-1.2.13.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/ognl-2.6.9-patch-20090427.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/poi-3.0-FINAL.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-dao-1.0.51.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-dao-tiger-1.0.51.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-extension-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-framework-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-tiger-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/sa-struts-1.0.4-sp9.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/struts-1.2.9.jar"/>
+    </path>
+    <path id="sastrats_checkout.classpath">
+        <pathelement location="src/main/webapp/WEB-INF/classes"/>
+        <pathelement location="target/test-classes"/>
+        <path refid="Web App ライブラリー.libraryclasspath"/>
+        <pathelement location="lib/cglib-nodep-2.1_3.jar"/>
+        <pathelement location="lib/easymock-2.4.jar"/>
+        <pathelement location="lib/easymockclassextension-2.4.jar"/>
+        <pathelement location="lib/geronimo-jsp_2.0_spec-1.0.jar"/>
+        <pathelement location="lib/geronimo-servlet_2.4_spec-1.0.jar"/>
+        <pathelement location="lib/junit-4.4.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/antlr-2.7.7.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/aopalliance-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-collections-3.1.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-digester-1.6.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-el-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-fileupload-1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-io-1.3.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-logging-1.1.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/commons-validator-1.2.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-annotation_1.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-ejb_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-interceptor_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-jpa_3.0_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/geronimo-jta_1.1_spec-1.0.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/h2-1.0.69.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jakarta-oro-2.0.8.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jakarta-taglibs-standard-1.1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/javassist-3.4.ga.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/jstl-1.1.2.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/log4j-1.2.13.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/ognl-2.6.9-patch-20090427.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/poi-3.0-FINAL.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-dao-1.0.51.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-dao-tiger-1.0.51.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-extension-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-framework-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/s2-tiger-2.4.45.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/sa-struts-1.0.4-sp9.jar"/>
+        <pathelement location="src/main/webapp/WEB-INF/lib/struts-1.2.9.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="src/main/webapp/WEB-INF/classes"/>
+        <mkdir dir="target/test-classes"/>
+        <copy includeemptydirs="false" todir="src/main/webapp/WEB-INF/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="src/main/webapp/WEB-INF/classes">
+            <fileset dir="src/main/resources">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/resources">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="src/main/webapp/WEB-INF/classes"/>
+        <delete dir="target/test-classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="src/main/webapp/WEB-INF/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <classpath refid="sastrats_checkout.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <src path="src/test/resources"/>
+            <classpath refid="sastrats_checkout.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
