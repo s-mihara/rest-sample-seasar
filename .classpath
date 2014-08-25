@@ -40,7 +40,7 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/s2-extension-2.4.45.jar" sourcepath="src/main/webapp/WEB-INF/lib/sources/s2-extension-2.4.45-sources.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/s2-framework-2.4.45.jar" sourcepath="src/main/webapp/WEB-INF/lib/sources/s2-framework-2.4.45-sources.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/s2-tiger-2.4.45.jar" sourcepath="src/main/webapp/WEB-INF/lib/sources/s2-tiger-2.4.45-sources.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/sa-struts-1.0.4-sp9.jar" sourcepath="src/main/webapp/WEB-INF/lib/sources/sa-struts-1.0.4-sp9-sources.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/struts-1.2.9.jar" sourcepath="src/main/webapp/WEB-INF/lib/sources/struts-1.2.9-sources.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/sa-struts-1.0.4-sp9.jar" sourcepath="/Users/shun/Documents/workspace/source/sa-struts-1.0.4-sp9.zip"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/struts-1.2.9.jar" sourcepath="/Users/shun/Documents/workspace/source/struts-1.2.9-src.zip"/>
 	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>
