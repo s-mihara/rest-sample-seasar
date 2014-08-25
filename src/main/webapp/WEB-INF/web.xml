@@ -99,7 +99,7 @@ version="2.4">
     
     <servlet>
         <servlet-name>action</servlet-name>
-        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <servlet-class>jp.co.mihashun.common.core.RestActionServlet</servlet-class>
         <init-param>
             <param-name>config</param-name>
             <param-value>/WEB-INF/struts-config.xml</param-value>
