@@ -23,40 +23,6 @@ public class S2JSONRequestProcessor extends S2RequestProcessor {
 	protected void processPopulate(HttpServletRequest request,
 			HttpServletResponse response, ActionForm form, ActionMapping mapping)
 			throws ServletException {
-
-		// if (form == null) {
-		// return;
-		// }
-		//
-		// String contentType = request.getContentType();
-		// String method = request.getMethod();
-		// if (contentType != null && contentType.startsWith("application/json")
-		// && "POST".equalsIgnoreCase(method)) {
-		//
-		// form.setServlet(servlet);
-		// form.setMultipartRequestHandler(null);
-		// processExecuteConfig(request, response, mapping);
-		// form.reset(mapping, request);
-		//
-		// Object actionForm = S2ActionMappingUtil.getActionMapping()
-		// .getActionForm();
-		// try {
-		//
-		// String postBody = ReaderUtil.readText(request.getReader());
-		// Object value = postBody;
-		//
-		// Beans.copy(value, actionForm).execute();
-		//
-		// } catch (IOException e) {
-		// log.error(e.getMessage(), e);
-		// throw new ServletException(e.getMessage(), e);
-		// }
-		//
-		// } else {
-		//
-		// super.processPopulate(request, response, form, mapping);
-		//
-		// }
 		if (form == null) {
 			return;
 		}

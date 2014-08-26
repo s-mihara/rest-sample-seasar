@@ -36,6 +36,7 @@ public class RestTrialAction {
 		// idのバリデートは済んでいると仮定。
 		Integer id = Integer.valueOf(restTrialForm.id);
 		LinkedHashMap<String, String> resHashMap = new LinkedHashMap<String, String>();
+		LinkedHashMap<String, String> decode;
 		switch (httpServletRequest.getMethod().toUpperCase()) {
 		case "GET":
 			// 取得
@@ -48,12 +49,8 @@ public class RestTrialAction {
 			break;
 		case "POST":
 			// 登録。自動採番させる。
-			// 先にシーケンスを繰り上げる。
-			// String body =
-			// ReaderUtil.readText(httpServletRequest.getReader());
 			System.out.println(restTrialForm.jsonBody);
-			LinkedHashMap<String, String> decode = JSON
-					.decode(restTrialForm.jsonBody);
+			decode = JSON.decode(restTrialForm.jsonBody);
 			// 永続化
 			dataMap.put(++sequence, decode);
 			// idフィールドをセット
@@ -63,19 +60,43 @@ public class RestTrialAction {
 			break;
 		case "PUT":
 			// 更新。
-			
+			if (dataMap.containsKey(id)) {
+				decode = JSON.decode(restTrialForm.jsonBody);
+				// 永続化
+				dataMap.put(id, decode);
+				decode.put("id", id.toString());
+				resHashMap = decode;
+			} else {
+				httpServletResponse.setStatus(404);
+				return null;
+			}
 			break;
 		case "DELETE":
-			
-			
+			// 削除
+			if (dataMap.containsKey(id)) {
+				resHashMap = dataMap.remove(id);
+				;
+			} else {
+				httpServletResponse.setStatus(404);
+				return null;
+			}
 			break;
 		default:
 			// Method Not Allowed
 			httpServletResponse.setStatus(405);
 			break;
 		}
-
 		ResponseUtil.write(JSON.encode(resHashMap), "application/json");
+		return null;
+	}
+
+	@Execute(validator = false)
+	public String dataFindAll() {
+		if ("GET".equalsIgnoreCase(httpServletRequest.getMethod())) {
+			ResponseUtil.write(JSON.encode(dataMap), "application/json");
+		} else {
+			httpServletResponse.setStatus(405);
+		}
 		return null;
 	}
 }
