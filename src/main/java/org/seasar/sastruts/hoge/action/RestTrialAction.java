@@ -18,6 +18,11 @@ import org.seasar.struts.annotation.Execute;
 import org.seasar.struts.util.ResponseUtil;
 
 public class RestTrialAction {
+	
+	// データ
+	public static HashMap<Integer, LinkedHashMap<String, String>> dataMap = new HashMap<Integer, LinkedHashMap<String, String>>();
+	// シーケンス
+	public static Integer sequence = 0;
 
 	@Resource
 	protected HttpServletRequest httpServletRequest;
@@ -25,11 +30,6 @@ public class RestTrialAction {
 	protected HttpServletResponse httpServletResponse;
 	@ActionForm
 	public RestTrialForm restTrialForm;
-
-	// データ
-	public static HashMap<Integer, LinkedHashMap<String, String>> dataMap = new HashMap<Integer, LinkedHashMap<String, String>>();
-	// シーケンス
-	public static Integer sequence = 0;
 
 	@Execute(urlPattern = "data/{id}", validator = false)
 	public String data() {
@@ -49,7 +49,6 @@ public class RestTrialAction {
 			break;
 		case "POST":
 			// 登録。自動採番させる。
-			System.out.println(restTrialForm.jsonBody);
 			decode = JSON.decode(restTrialForm.jsonBody);
 			// 永続化
 			dataMap.put(++sequence, decode);
@@ -57,6 +56,11 @@ public class RestTrialAction {
 			decode.put("id", sequence.toString());
 			// 戻り値を作成
 			resHashMap = decode;
+			httpServletResponse.setStatus(201);
+			httpServletResponse.setHeader(
+					"Location",
+					"http://localhost:8080/sastrats/restTrial/data/"
+							+ sequence.toString());
 			break;
 		case "PUT":
 			// 更新。
@@ -66,6 +70,8 @@ public class RestTrialAction {
 				dataMap.put(id, decode);
 				decode.put("id", id.toString());
 				resHashMap = decode;
+				httpServletResponse.setStatus(201);
+				
 			} else {
 				httpServletResponse.setStatus(404);
 				return null;
