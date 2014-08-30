@@ -1,2 +1,3 @@
 /.settings/*
-/src/main/webapp/WEB-INF/classes/*
+/src/main/webapp/WEB-INF/classes/jp
+/src/main/webapp/WEB-INF/classes/org
